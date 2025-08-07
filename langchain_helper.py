@@ -10,3 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 embeddings = OpenAIEmbeddings()
+
+def create_vector_db_from_youtube_url(video_url: str) -> FAISS:
+    loader = YoutubeLoader.from_youtube_url(video_url)
